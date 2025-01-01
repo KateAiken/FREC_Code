@@ -10,17 +10,19 @@ public class FREC_Main{
                 quiz.instructions();
                 command = quiz.getOption(input);
             }
-            if (command.equals("f")){
+            else if (command.equals("f")){
                 quiz.printFREC(7);
                 command = quiz.getOption(input);
             }
-            String playerAnswer[] = new String[10];
-            for (int quizNum = 0; quizNum < 10; quizNum ++){
-                quiz.printQuestion(quizNum);
-                playerAnswer[quizNum] = quiz.getAns(input);
+            else if (command.equals("p")){
+                String playerAnswer[] = new String[10];
+                for (int quizNum = 0; quizNum < 10; quizNum ++){
+                    quiz.printQuestion(quizNum);
+                    playerAnswer[quizNum] = quiz.getAns(input);
+                }
+                quiz.printFREC(quiz.calculate(playerAnswer));
+                command = quiz.getOption(input);
             }
-            quiz.printFREC(quiz.calculate(playerAnswer));
-            command = quiz.getOption(input);
         }
         input.close();
     }
