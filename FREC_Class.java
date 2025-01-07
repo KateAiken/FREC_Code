@@ -98,7 +98,7 @@ public class FREC_Class {
             }
         }
         else{
-            System.out.println(FREC[num][0]+ "\nAbout: "+ FREC[num][1]);
+            System.out.println("\n"+ FREC[num][0]+ "\nAbout: "+ FREC[num][1]);
         }
     }
 
